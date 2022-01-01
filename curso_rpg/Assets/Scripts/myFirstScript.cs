@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//[RequireComponent(Rigidbody)]
 public class myFirstScript : MonoBehaviour
 {
 
@@ -22,6 +24,13 @@ public class myFirstScript : MonoBehaviour
     /// PROGRAMACIÓN ORIENTADA A OBJETOS
     /// 
     /// Clases vs structuras
+    /// 
+    /// Herencia, polimorfismo, virtual y Override
+    /// 
+    /// Acceder a componentes de gameobjects
+    /// 
+    /// getcomponent
+    /// Find
     /// </summary>
     /// 
 
@@ -292,6 +301,20 @@ public class myFirstScript : MonoBehaviour
             c.PrintCharacterStats();
         }
 
+        Transform theTransform = GetComponent<Transform>();
+        Debug.Log(theTransform.position);
+        Debug.Log(theTransform.rotation);
+
+        //GetComponent<Rigidbody>(); petaria porque no tiene rigidbody el gameobject
+
+
+        //FIND y Getcomponent!
+        Camera cam = GetComponent<Camera>();
+        Debug.Log(cam.fieldOfView);
+
+
+        Transform t = GameObject.Find("Directional Light").GetComponent<Transform>();
+        Debug.Log($"La luz está en: {t.position}");
     }
     void Update()
     {

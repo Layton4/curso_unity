@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,6 +314,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 2
   y: 3
+  hour: 23
+  pi: 3.14
+  game: Objetivo cumplido
+  spiderman: 1
+  ranking: 00000000000000000000000000000000
+  ranking2: 01000000020000000400000005000000
+  partyMembers:
+  - Aragorn
+  - Gimli
+  - "L\xE9golas"
 --- !u!1 &1166876162
 GameObject:
   m_ObjectHideFlags: 0
