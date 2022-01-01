@@ -268,6 +268,30 @@ public class myFirstScript : MonoBehaviour
         sword2.PrintWeaponStats(); //Excalibur
         //las estructuras no van como las clases, la estructura te permite hacer esto de arriba
 
+        //Probando la creación de personajes usando heréncia
+        Paladin p = new Paladin();
+        Paladin p2 = new Paladin("Jimmy Neutron",sword);
+
+        Archer a = new Archer("Légolas", new Weapon("Arco del bosque negro", 7));
+
+        Magician m = new Magician("Gándalf", 100/*, new Weapon("Bara de magia blanca", 20)*/); //tratamos como character
+
+        /*Debug.Log("Mostremos a los nuevos miembros del equipo:");
+        p.PrintCharacterStats();
+        p2.PrintCharacterStats();
+        a.PrintCharacterStats();
+        m.PrintCharacterStats();*/
+
+        List<Character> party = new List<Character>(); //los 3 personajes son characters, además de Archer, Paladin o Magician
+        party.Add(p2);
+        party.Add(a);
+        party.Add(m);
+
+        foreach( Character c in party)
+        {
+            c.PrintCharacterStats();
+        }
+
     }
     void Update()
     {
